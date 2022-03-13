@@ -48,34 +48,14 @@ class _HomeState extends State<Home> {
         ),
         Positioned(
           right: 0,
-          child: Container(
-            width: 30,
-            height: 30,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              boxShadow: <BoxShadow>[
-                BoxShadow(
-                  color: Colors.black26,
-                  blurRadius: 10,
-                  spreadRadius: 3,
-                  offset: Offset(0, 1), // Shadow position
-                ),
-              ],
-              shape: BoxShape.circle
-            ),
-            child: const Icon(Icons.arrow_right_rounded)
-          ),
-        ),
-        Positioned(
-          left: 0,
           child: InkWell(
             onTap: ontap,
             child: Container(
-              width: 60,
-              height: 60,
-              decoration:  BoxDecoration(
+              width: 30,
+              height: 30,
+              decoration: const BoxDecoration(
                 color: Colors.white,
-                boxShadow: const <BoxShadow>[
+                boxShadow: <BoxShadow>[
                   BoxShadow(
                     color: Colors.black26,
                     blurRadius: 10,
@@ -83,11 +63,31 @@ class _HomeState extends State<Home> {
                     offset: Offset(0, 1), // Shadow position
                   ),
                 ],
-                shape: boxShape != null ? BoxShape.rectangle : BoxShape.circle,
-                borderRadius:  boxShape != null ? BorderRadius.circular(20) : null
+                shape: BoxShape.circle
               ),
               child: const Icon(Icons.arrow_right_rounded)
             ),
+          ),
+        ),
+        Positioned(
+          left: 0,
+          child: Container(
+            width: 60,
+            height: 60,
+            decoration:  BoxDecoration(
+              color: Colors.white,
+              boxShadow: const <BoxShadow>[
+                BoxShadow(
+                  color: Colors.black26,
+                  blurRadius: 10,
+                  spreadRadius: 3,
+                  offset: Offset(0, 1), // Shadow position
+                ),
+              ],
+              shape: boxShape != null ? BoxShape.rectangle : BoxShape.circle,
+              borderRadius:  boxShape != null ? BorderRadius.circular(20) : null
+            ),
+            //child: Image.network("https://picsum.photos/200/300")
           ),
         ),
       ],
